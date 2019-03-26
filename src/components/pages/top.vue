@@ -11,6 +11,18 @@
 
 .top-content{
   font-family: 'Josefin Sans', sans-serif;
+  margin-top: 10%;
+}
+
+.top-content p {
+  font-size: 1.125rem;
+  margin: 10px 0 42px;
+}
+
+.mainLabel{
+  font-size: 5rem;
+  text-transform: uppercase;
+  font-weight: normal;
 }
 </style>
 
