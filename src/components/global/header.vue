@@ -7,8 +7,8 @@
         <li>Member</li>
         <li>Info</li>
         <li>Contact</li>-->
-        <li data-menuanchor="page1" class="active"><a href="#page1">About</a></li>
-        <li data-menuanchor="page2"><a href="#page2">Member</a></li>
+        <router-link to="/"><a>Top</a></router-link>
+        <router-link to="/member"><a>Member</a></router-link>
       </ul>
     </nav>
   </header>
@@ -31,7 +31,7 @@
   list-style: none;
 }
 
-.main-nav li{
+.main-nav a{
   margin-left: 36px;
   text-decoration: none;
 }

@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <app-header></app-header>
-      <app-top />
-      <app-member />
+      <router-view />
+      
   </div>
 </template>
 
@@ -15,8 +15,8 @@ export default {
   
   components: {
     'app-header':Header,
-    'app-top':Top,
-    'app-member':Member
+    'page-top':Top,
+    'page-member':Member
   }
 }
 </script>
