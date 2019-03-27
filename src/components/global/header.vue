@@ -3,10 +3,12 @@
     <h1>Red Smith</h1>
     <nav>
       <ul class="main-nav">
-        <li>About</li>
+        <!--<li>About</li>
         <li>Member</li>
         <li>Info</li>
-        <li>Contact</li>
+        <li>Contact</li>-->
+        <li data-menuanchor="page1" class="active"><a href="#page1">About</a></li>
+        <li data-menuanchor="page2"><a href="#page2">Member</a></li>
       </ul>
     </nav>
   </header>
