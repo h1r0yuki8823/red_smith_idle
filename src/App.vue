@@ -8,15 +8,12 @@
 
 <script>
 import Header from './components/global/header'
-import Top from './components/pages/top'
-import Member from './components/pages/member'
+
 
 export default {
   
   components: {
-    'app-header':Header,
-    'page-top':Top,
-    'page-member':Member
+    'app-header':Header
   }
 }
 </script>

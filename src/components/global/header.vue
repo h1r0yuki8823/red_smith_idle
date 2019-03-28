@@ -9,6 +9,7 @@
         <li>Contact</li>-->
         <router-link to="/"><a>Top</a></router-link>
         <router-link to="/member"><a>Member</a></router-link>
+        <router-link to="/contact"><a>Contact</a></router-link>
       </ul>
     </nav>
   </header>
