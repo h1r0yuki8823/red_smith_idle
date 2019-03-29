@@ -22,6 +22,7 @@
   font-family: 'Merriweather', serif; 
   display:flex;
   justify-content: space-between;
+  background-color: tomato;
 }
 
 .main-nav{
@@ -41,6 +42,10 @@
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 4%;
+}
+
+h1{
+  color: white;
 }
 
 </style>
