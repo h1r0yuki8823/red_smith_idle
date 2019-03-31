@@ -5,7 +5,7 @@
       <h2 class="mainLabel">RED SMITH</h2>
       <p class="subLabel2">メンバー募集中</p>
     </div>
-    <div>
+    <div class="top-button"> 
       <route-button text="応募する" routeName="contact" />
     </div>
   </div>
@@ -21,13 +21,15 @@ export default {
 </script>
 
 
-<style>
+<style scoped>
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
 
 .top-content{
   font-family: 'Josefin Sans', sans-serif;
   overflow: hidden;
   background-color: black;
+  display: block;
+  min-height: 80vh;
 }
 
 .top-content p {
@@ -43,6 +45,7 @@ export default {
 
 .top-label{
   margin-top: 10%;
+  margin-left: 14px;
 }
 
 .top-label h2{
@@ -52,6 +55,10 @@ export default {
 .top-content p{
   color: snow;
   font-size: 2rem;
+}
+
+.top-button{
+  margin-left: 30px;
 }
 </style>
 

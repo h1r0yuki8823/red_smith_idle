@@ -1,5 +1,6 @@
 <template>
-  <button>{{ text }}</button>
+  <button @click="onClickLink">{{ text }}</button>
+
 </template>
 
 <script>
@@ -7,8 +8,8 @@ export default {
   
 props:['routeName','text'],
   methods:{
-    router: function(event){
-      router.push({ path: this.routeName})
+    onClickLink: function(){
+      this.$router.push({ path:'contact'});
     }
   }
 }
@@ -23,6 +24,8 @@ button{
   border: solid 2px tomato;
   border-radius: 30px;
   transition: .4s;
+  width: 100%;
+  max-width: 120px;
 }
 
 button:hover{

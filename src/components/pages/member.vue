@@ -2,7 +2,10 @@
   <div class="members">
     <h2>MEMBER</h2>
     <h3>メンバー</h3>
-    <member-card name="sample" src="https://prog-8.com/images/html/advanced/php.png" age="20"></member-card>
+    <member-card name="sample1" src="https://prog-8.com/images/html/advanced/php.png" age="??"></member-card>
+    <member-card name="sample2" src="https://prog-8.com/images/html/advanced/php.png" age="??"></member-card>
+    <member-card name="sample3" src="https://prog-8.com/images/html/advanced/php.png" age="??"></member-card>
+    <member-card name="sample4" src="https://prog-8.com/images/html/advanced/php.png" age="??"></member-card>
   </div>
 </template>
 
@@ -17,11 +20,13 @@ export default {
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+
 .members{
-  /*
-  margin-top: 65px;
-  height: 500px;
-  background-color: black; */
+  font-family: 'Josefin Sans', sans-serif;
+  overflow: hidden;
+  background-color: black;
+  min-height: 80vh;
   text-align: center;
 }
 </style>
