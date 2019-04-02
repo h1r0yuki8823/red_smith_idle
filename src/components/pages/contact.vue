@@ -6,7 +6,9 @@
         <input id="name" v-model="contactForm.name" placeholder="お名前">
       </div>
       <div>
-        <input id="email" v-model="contactForm.email" placeholder="メールアドレス" >
+        <!--input id="email" v-model="contactForm.email" placeholder="メールアドレス"  > -->
+        <input name="email" v-validate="'required|email'" :class="{'input': true, 'is-danger':errors.has('email')}" id="email" v-model="contactForm.email" placeholder="メールアドレス">
+        <span v-show="errors.has('email')" class="help is-danger">{{ errors.first('email') }}</span>
       </div>
       <div>
         <textarea v-model="contactForm.contents" ></textarea>
@@ -35,6 +37,7 @@ export default {
 
       mailer(this.contactForm)
         .then(() => {
+          this.formReset()
           alert('success!')
         })
         .catch(err => {
@@ -43,7 +46,19 @@ export default {
         .finally(() => {
           this.contactForm.loading = false
         })
+    },
+    formReset: function(){
+      this.$refs.form.reset()
+    },
+    validateBeforeSubmit(){
+      this.$validator.validateAll().then((result) => {
+        if(result){
+          return;
+        }
+        alert('入力されていない項目があります。')
+      })
     }
+
   }
 }
 </script>
@@ -54,7 +69,7 @@ export default {
 .contact{
   font-family: 'Josefin Sans', sans-serif;
   overflow: hidden;
-  background-color: black;
+  background-color: white;
   min-height: 80vh;
 }
 
