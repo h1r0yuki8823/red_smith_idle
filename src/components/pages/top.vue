@@ -59,6 +59,7 @@ export default {
 
 .top-button{
   margin-left: 30px;
+  margin-bottom: 20px;
 }
 </style>
 

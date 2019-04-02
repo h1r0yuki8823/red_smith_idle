@@ -25,7 +25,7 @@ export default {
 .members{
   font-family: 'Josefin Sans', sans-serif;
   overflow: hidden;
-  background-color: black;
+  background: linear-gradient(tomato, plum);
   min-height: 80vh;
   text-align: center;
 }

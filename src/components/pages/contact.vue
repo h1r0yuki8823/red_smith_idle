@@ -3,7 +3,9 @@
     <h2>CONTACT</h2>
     <div class="contact-container">
       <div>
-        <input id="name" v-model="contactForm.name" placeholder="お名前">
+        <!--<input id="name" v-model="contactForm.name" placeholder="お名前">-->
+        <input name="name" v-validate="'required'" :class="{'input': true, 'form-danger':errors.has('name')}" id="name" v-model="contactForm.name" placeholder="お名前">
+        <span v-show="errors.has('name')" class="alert alert-danger">{{ errors.first('name')}}</span>
       </div>
       <div>
         <!--input id="email" v-model="contactForm.email" placeholder="メールアドレス"  > -->
@@ -14,7 +16,7 @@
         <textarea v-model="contactForm.contents" ></textarea>
       </div>
     </div>
-    <button v-on:click="sendMail">送信</button>
+    <button v-on:click="validateBeforeSubmit">送信</button>
   </div>
 </template>
 
@@ -37,14 +39,15 @@ export default {
 
       mailer(this.contactForm)
         .then(() => {
-          this.formReset()
           alert('success!')
+          
         })
         .catch(err => {
           alert('error')
         })
         .finally(() => {
           this.contactForm.loading = false
+          this.formReset()
         })
     },
     formReset: function(){
@@ -53,7 +56,8 @@ export default {
     validateBeforeSubmit(){
       this.$validator.validateAll().then((result) => {
         if(result){
-          return;
+          this.sendMail();
+          return
         }
         alert('入力されていない項目があります。')
       })
@@ -66,13 +70,20 @@ export default {
 <style scoped>
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
 
+h2{
+  margin-left: 14px;
+}
+
 .contact{
   font-family: 'Josefin Sans', sans-serif;
   overflow: hidden;
-  background-color: white;
+  background: linear-gradient(tomato, plum);
   min-height: 80vh;
 }
 
+span{
+  margin-left:  14px;
+}
 
 input,
 textarea{
