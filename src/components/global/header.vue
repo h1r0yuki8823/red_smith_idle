@@ -7,9 +7,9 @@
         <li>Member</li>
         <li>Info</li>
         <li>Contact</li>-->
-        <router-link to="/"><a>Top</a></router-link>
-        <router-link to="/member"><a>Member</a></router-link>
-        <router-link to="/contact"><a>Contact</a></router-link>
+        <router-link to="/"><li>Top</li></router-link>
+        <router-link to="/member"><li>Member</li></router-link>
+        <router-link to="/contact"><li>Contact</li></router-link>
       </ul>
     </nav>
   </header>
@@ -33,19 +33,42 @@
   list-style: none;
 }
 
-.main-nav a{
+.main-nav li{
   margin-left: 36px;
   text-decoration: none;
 }
 
-.wrapper{
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 4%;
-}
+
 
 h1{
   color: white;
+}
+
+@media screen and (max-width: 480px) {
+  h1{
+    font-size: 15px;
+    line-height: 55px;
+    padding: 0 2%;
+  }
+
+  .main-nav{
+    font-size: 10px;
+  }
+
+  .main-nav li{
+  margin-left: 18px;
+  margin-right: 10px;
+  text-decoration: none;
+}
+
+  .page-header{
+    width: 100%;
+  }
+
+  a{
+    text-align: right;
+  }
+  
 }
 
 </style>

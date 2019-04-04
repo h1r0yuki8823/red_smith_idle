@@ -5,12 +5,12 @@
       <div>
         <!--<input id="name" v-model="contactForm.name" placeholder="お名前">-->
         <input name="name" v-validate="'required'" :class="{'input': true, 'form-danger':errors.has('name')}" id="name" v-model="contactForm.name" placeholder="お名前">
-        <span v-show="errors.has('name')" class="alert alert-danger">{{ errors.first('name')}}</span>
+        <p v-show="errors.has('name')" class="alert alert-danger">{{ errors.first('name')}}</p>
       </div>
       <div>
         <!--input id="email" v-model="contactForm.email" placeholder="メールアドレス"  > -->
         <input name="email" v-validate="'required|email'" :class="{'input': true, 'is-danger':errors.has('email')}" id="email" v-model="contactForm.email" placeholder="メールアドレス">
-        <span v-show="errors.has('email')" class="help is-danger">{{ errors.first('email') }}</span>
+        <p v-show="errors.has('email')" class="help is-danger">{{ errors.first('email') }}</p>
       </div>
       <div>
         <textarea v-model="contactForm.contents" ></textarea>
@@ -72,6 +72,7 @@ export default {
 
 h2{
   margin-left: 14px;
+  text-align: center;
 }
 
 .contact{
@@ -92,8 +93,9 @@ textarea{
   border-radius: 5px;
   padding: 10px;
   font-size: 1rem;
-  margin-left: 14px;
-  margin-bottom: 14px;
+  margin-left: 50px;
+  margin-bottom: 30px;
+  
 }
 
 input{
@@ -117,13 +119,50 @@ button{
   transition: .4s;
   width: 100%;
   max-width: 120px;
-  margin-left: 14px;
+  margin-left: 50px;
   margin-bottom: 14px;
 }
 
 button:hover{
   background: tomato;
   color: white;
+}
+
+.contact-container{
+  margin-top: 80px;
+}
+
+@media screen and (max-width: 480px){
+  .contact-container{
+    text-align: center;
+    margin-top: 40px;
+  }
+
+  input{
+    width: 300px;
+    margin: 15px 0px;
+  }
+
+  textarea{
+    width: 300px;
+    margin: 10px 0px;
+  }
+
+  p{
+    height: 10px;
+    margin: 0;
+  }
+
+  h2{
+    margin:20px 0px;
+  }
+
+  button{
+    text-align: center;
+    margin: 20px 189px;
+    background: tomato;
+    color: white;
+  }
 }
 
 </style>

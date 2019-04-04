@@ -29,4 +29,8 @@ export default {
   min-height: 80vh;
   text-align: center;
 }
+
+@media screen and(min-width: 480px) {
+  
+}
 </style>

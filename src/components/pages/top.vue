@@ -61,5 +61,17 @@ export default {
   margin-left: 30px;
   margin-bottom: 20px;
 }
+
+@media screen and (max-width:480px) {
+  .top-content{
+    text-align: center;
+    width: 100%;
+  }
+
+  .top-label{
+  margin-top: 10%;
+  
+}
+}
 </style>
 
