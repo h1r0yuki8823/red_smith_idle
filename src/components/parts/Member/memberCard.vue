@@ -26,5 +26,22 @@ export default {
   color: tomato;
 }
 
+img{
+  width: 150px;
+  height: 150px;
+}
+
+
+@media screen and (max-width: 480px) {
+  .memberCard{
+    width:  50%;
+  }
+
+  img{
+    width: 100px;
+    height: 100px;
+  }
+}
+
 
 </style>

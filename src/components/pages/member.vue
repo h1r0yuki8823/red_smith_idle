@@ -30,7 +30,7 @@ export default {
   text-align: center;
 }
 
-@media screen and(min-width: 480px) {
+@media screen and (max-width: 480px) {
   
 }
 </style>
