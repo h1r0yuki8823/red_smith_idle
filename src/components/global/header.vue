@@ -64,6 +64,7 @@ nav li:hover{
 
 h1{
   color: white;
+  margin-left: 15px;
 }
 
 li{

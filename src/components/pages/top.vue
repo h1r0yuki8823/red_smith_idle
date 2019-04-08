@@ -70,8 +70,12 @@ export default {
 
   .top-label{
   margin-top: 10%;
-  
-}
+  }
+
+  .top-button{
+    margin-left: 0px;
+  }
+
 }
 </style>
 

@@ -16,7 +16,9 @@
         <textarea v-model="contactForm.contents" ></textarea>
       </div>
     </div>
-    <button v-on:click="validateBeforeSubmit">送信</button>
+    <div class="button-container">
+      <button v-on:click="validateBeforeSubmit">送信</button>
+    </div>
   </div>
 </template>
 
@@ -94,7 +96,7 @@ textarea{
   padding: 10px;
   font-size: 1rem;
   margin-left: 50px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   
 }
 
@@ -132,6 +134,11 @@ button:hover{
   margin-top: 80px;
 }
 
+p{
+  margin: 5px 0px 15px 50px;
+  
+}
+
 @media screen and (max-width: 480px){
   .contact-container{
     text-align: center;
@@ -157,11 +164,14 @@ button:hover{
     margin:20px 0px;
   }
 
-  button{
-    text-align: center;
-    margin: 20px 189px;
+  button{  
+    margin: 20px 0px;
     background: tomato;
     color: white;
+  }
+
+  .button-container{
+    text-align: center;
   }
 }
 

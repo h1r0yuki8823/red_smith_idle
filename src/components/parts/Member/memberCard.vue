@@ -1,6 +1,6 @@
 <template>
   <div class="memberCard"> 
-    <img :src="src" />
+    <img :src="src"/>
     <p class="nameLabel">Name: {{ name }}</p>
     <p class="ageLabel">Age: {{ age }}</p>
   </div>
@@ -9,6 +9,7 @@
 <script>
 export default {
   props: ['name', 'src', 'age']
+  
 }
 </script>
 
@@ -19,11 +20,11 @@ export default {
 }
 
 .nameLabel{
-  color:tomato;
+  color:red;
 }
 
 .ageLabel{
-  color: tomato;
+  color: red;
 }
 
 img{
