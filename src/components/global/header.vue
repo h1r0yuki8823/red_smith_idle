@@ -7,9 +7,9 @@
         <li>Member</li>
         <li>Info</li>
         <li>Contact</li>-->
-        <router-link to="/"><li>Top</li></router-link>
-        <router-link to="/member"><li>Member</li></router-link>
-        <router-link to="/contact"><li>Contact</li></router-link>
+        <router-link to="/"><li><a>Top</a></li></router-link>
+        <router-link to="/member"><li><a>Member</a></li></router-link>
+        <router-link to="/contact"><li><a>Contact</a></li></router-link>
       </ul>
     </nav>
   </header>
@@ -24,7 +24,7 @@
   justify-content: space-between;
   background-color: tomato;
 }
-
+/*
 .main-nav{
   display: flex;
   font-size: 1.25rem;
@@ -37,11 +37,42 @@
   margin-left: 36px;
   text-decoration: none;
 }
+*/
 
+.main-nav{
+  display: flex;
+}
 
+nav ul{
+  margin-top: 34px;
+  margin-left: 17px;
+  margin-right: 17px;
+  text-align: center;
+}
+
+nav a{
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  color: white;
+  padding-bottom: 5px;
+}
+
+nav li:hover{
+  border-bottom: 3px solid  plum;
+}
 
 h1{
   color: white;
+}
+
+li{
+  text-decoration: none;
+  list-style-type: none;
+}
+
+a{
+  margin:0 10px;
 }
 
 @media screen and (max-width: 480px) {
@@ -67,6 +98,7 @@ h1{
 
   a{
     text-align: right;
+    margin: 0px;
   }
   
 }
